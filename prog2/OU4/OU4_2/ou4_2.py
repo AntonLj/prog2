@@ -24,7 +24,9 @@ def main():
 		ctime.append(t2-t1)
 	n = [*range(30,35)]
 	fig, ax = plt.subplots()
-	ax.plot(n,pytime)
+	ax.plot(n,pytime,label='Python')
+	ax.plot(n,ctime,label='c++')
+	ax.legend()
 	ax.set(xlabel='n',ylabel='seconds (s)',title='C++ vs Python (fib)')
 	ax.grid()
 	fig.savefig('test.png')
