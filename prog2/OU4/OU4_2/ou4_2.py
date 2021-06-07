@@ -13,7 +13,7 @@ def fib_py(n):
 def main():
 	pytime = []
 	ctime = []
-	for i in range(30,35):
+	for i in range(30,45):
 		t1 = pc()
 		f=Heltal(i)
 		f.fib()
@@ -22,7 +22,7 @@ def main():
 		t3 = pc()
 		pytime.append(t3-t2)
 		ctime.append(t2-t1)
-	n = [*range(30,35)]
+	n = [*range(30,45)]
 	fig, ax = plt.subplots()
 	ax.plot(n,pytime,label='Python')
 	ax.plot(n,ctime,label='c++')
@@ -31,8 +31,8 @@ def main():
 	ax.grid()
 	fig.savefig('test.png')
 	plt.show()
-	f = Heltal(40)
-	print(f'Time with n = 47: {f.fib()}')
+	f = Heltal(47)
+	print(f'f.fib() med n = 47: {f.fib()}')
 
 if __name__ == '__main__':
 	main()
